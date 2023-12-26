@@ -1,0 +1,71 @@
+<!-- views/courses.ejs -->
+<%- include('partials/navbar') %>
+
+<div class="container">
+    <h1 class="page-title">COURSES BY DEPARTMENT</h1>
+
+    <label for="department" class="department-label">Select Department:</label>
+    <select id="department" class="department-select" onchange="loadCourses()">
+        <option value="graphicDesign">Graphic Design</option>
+        <option value="paintingPrintmaking">Painting/Printmaking</option>
+        <option value="photography">Photography</option>
+        <option value="sculpture">Sculpture</option>
+        <option value="filmmakingVideo">Filmmaking/Video/Interdisciplinary</option>
+    </select>
+
+    <div id="courseList" class="course-list">
+        <!-- Courses will be displayed here based on the selected department -->
+    </div>
+</div>
+
+<script>
+    function loadCourses() {
+        const department = document.getElementById('department').value;
+        const courseList = document.getElementById('courseList');
+
+        // You can fetch the courses for the selected department from your server/database
+        // For simplicity, we'll use a static object here
+        const courses = {
+            graphicDesign: [
+                { code: "Art 368a", name: "Intermediate Graphic Design" },
+                { code: "Art 369b", name: "Interactive Design" },
+                { code: "Art 370a", name: "Motion Design" },
+                { code: "Art 468a and 469b", name: "Advanced Graphic Design" },
+                // ... add more courses
+            ],
+            paintingPrintmaking: [
+                { code: "Art 004a", name: "Words and Pictures" },
+                { code: "Art 111a or b", name: "Visual Thinking" },
+                { code: "Art 114a or b", name: "Basic Drawing" },
+                // ... add more courses
+            ],
+            photography: [
+                { code: "Art 136a or b", name: "Introductory B&W Photography" },
+                { code: "Art 138a or b", name: "Digital Photography" },
+                { code: "Art 237a", name: "Intermediate Photography" },
+                // ... add more courses
+            ],
+            sculpture: [
+                { code: "Art 002b", name: "Paper" },
+                { code: "Art 110a or b", name: "Sculpture Basics" },
+                { code: "Art 120a", name: "Introductory Sculpture: Wood" },
+                // ... add more courses
+            ],
+            filmmakingVideo: [
+                { code: "Art 007b", name: "Art of the Game" },
+                { code: "Art 141a", name: "Intro. Film Writing & Directing" },
+                { code: "Art 142a or b", name: "Intro. Documentary Filmmaking" },
+                // ... add more courses
+            ],
+        };
+
+        const selectedCourses = courses[department] || [];
+
+        // Display the courses in the courseList div
+        const coursesHTML = selectedCourses.map(course => `<p class="course-item">${course.code} - ${course.name}</p>`).join('');
+        courseList.innerHTML = coursesHTML;
+    }
+
+    // Initial load on page load
+    loadCourses();
+</script>

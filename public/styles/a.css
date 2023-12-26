@@ -1,0 +1,50 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+    color: #333;
+    text-align: center;
+}
+
+.department-label {
+    display: block;
+    margin: 20px 0 10px;
+    font-weight: bold;
+}
+
+.department-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.course-list {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+.course-item {
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.course-item:last-child {
+    border-bottom: none;
+}

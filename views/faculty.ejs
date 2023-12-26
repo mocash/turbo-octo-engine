@@ -1,0 +1,219 @@
+<!-- views/faculty.ejs -->
+
+<%- include('partials/navbar') %>
+
+<div class="container">
+    <h1 class="page-title">FACULTY</h1>
+
+    <!-- Dropdown for Faculty Sections -->
+    <label for="facultySections">Select Faculty Section:</label>
+    <select id="facultySections" onchange="loadFacultySection()">
+        <option value="administration">Administration</option>
+        <option value="artStaff">School of Art Staff</option>
+        <option value="graphicDesign">Graphic Design</option>
+        <option value="paintingPrintmaking">Painting / Printmaking</option>
+        <option value="photography">Photography</option>
+        <option value="sculpture">Sculpture</option>
+        <option value="financialAid">Financial Aid</option>
+        <option value="filmVideoInterdisciplinary">Film / Video / Interdisciplinary</option>
+    </select>
+
+    <!-- Faculty Content -->
+    <div id="facultyContent">
+        <!-- Content will be loaded here based on the selected faculty section -->
+    </div>
+</div>
+
+<script>
+    function loadFacultySection() {
+        const selectedSection = document.getElementById('facultySections').value;
+        const facultyContent = document.getElementById('facultyContent');
+
+        // You can fetch the faculty content for the selected section from your server/database
+        // For simplicity, we'll use a static object here
+        const facultyData = {
+            administration: [
+                "Teto Elsiddique (Last edited by)",
+                "Mark Aronson, Critic",
+                "Doug Ashford, Visiting Associate Professor",
+                "Colleen Asper, Critic",
+                "Pedro Barbeito, Lecturer",
+                "Anna Betbeze, Senior Critic",
+                "Michael Cloud, Critic",
+                "Marsha Cottrell, Critic",
+                "Anna Craycroft, Critic",
+                "Torkwase Dyson, Lecturer",
+                "Anoka Faruqee, Associate Professor",
+                "Rochelle Feinstein, Professor",
+                "Coco Fusco, Critic",
+                "Munro Galloway, Lecturer",
+                "Josephine Halvorson, Senior Critic",
+                "Kira Harris, Critic",
+                "Pablo Helguera, Critic",
+                "Byron Kim, Senior Critic"
+                // Add more names for Administration
+            ],
+            artStaff: [
+                "Patricia DeChiara (Last edited by)",
+                "Charlotte Cotton, Critic",
+                "Gregory Crewdson, Associate Professor",
+                "Liz Deschenes, Critic",
+                "Benjamin Donaldson, Lecturer",
+                "Dru Donovan, Lecturer",
+                "Kate Greene, Lecturer",
+                "Curran Hatleberg, Lecturer",
+                "Leslie Hewitt, Critic",
+                "Roni Horn, Senior Critic",
+                "Lisa Kereszi, Critic",
+                "Roxana Marcoci, Critic",
+                "Lesley Martin, Critic",
+                "Ted Partin, Lecturer",
+                "John Pilson, Critic",
+                "Richard Prince, Senior Critic",
+                "Barbara Probst, Critic",
+                "Collier Schorr, Senior Critic",
+                "Taryn Simon, Critic",
+                "Nancy Spector, Critic",
+                "Mark Steinmetz, Critic",
+                "Ka-Man Tse, Lecturer"
+                // Add more names for School of Art Staff
+            ],
+            graphicDesign: [
+                "Sadie Benning, Critic",
+                "Huma Bhabha, Critic",
+                "Nayland Blake, Critic",
+                "Sandra Burns, Lecturer",
+                "Leslie Dick, Critic",
+                "Keira Alexandra, Critic",
+                "Luke Archer, Lecturer",
+                "Michael Bierut, Senior Critic",
+                "Julian Bittiner, Critic",
+                "Anna Bokov, Critic",
+                "Irma Boom, Senior Critic",
+                "Matthew Carter, Senior Critic",
+                "Yeju Choi, Lecturer",
+                "Alice Chung, Senior Critic",
+                "Sheila Levrant de Bretteville, Professor",
+                "Paul Elliman, Senior Critic",
+                "Tobias Frere-Jones, Critic",
+                "John Gambell, Senior Critic",
+                "Barbara Glauber, Critic",
+                "Neil Goldberg, Critic",
+                "Jessica Helfand, Senior Critic",
+                "Allen Hori, Critic",
+                "Pamela Hovland, Senior Critic",
+                "David Israel, Critic",
+                "Karel Martens, Senior Critic",
+                "Dan Michaelson, Senior Critic",
+                "Manuel Miranda, Critic",
+                "Sigi Moeslinger, Senior Critic",
+                "Gisela Noack, Lecturer",
+                "Eddie Opara, Senior Critic",
+                "Christopher Pullman, Senior Critic",
+                "Michael Rock, Professor (Adjunct)",
+                "Richard Rose, Lecturer",
+                "Douglass G. A. Scott, Senior Critic",
+                "Susan Sellers, Senior Critic",
+                "Elizabeth Sledge, Critic",
+                "William Storandt, Critic",
+                "Scott Stowell, Critic",
+                "Masamichi Udagawa, Senior Critic",
+                "Henk van Assen, Senior Critic",
+                "Daniel van der Velden, Senior Critic",
+                "Linda van Deursen, Critic",
+                "Ryan Waller, Critic",
+                "Robert Wiesenberger, Critic",
+                "Forest Young, Critic"
+                // Add more names for Graphic Design
+            ],
+            paintingPrintmaking: [
+                "Jonathan Andrews, Lecturer",
+                "Michel Auder, Critic",
+                "Johannes DeYoung, Critic",
+                "Vincent Katz, Critic",
+                "Sarah Lasley, Lecturer",
+                "Barbara London, Critic",
+                "Sandra Luckow, Critic",
+                "Rick Moody, Critic",
+                "Paulina Pobocha, Critic",
+                "Michael Roemer, Professor (Adjunct)",
+                "Sarah Stevens-Morling, Critic",
+                "Anahita Vossoughi, Lecturer",
+                "Jonathan Weinberg, Critic",
+                "Natalie Westbrook, Lecturer"
+                // Add more names for Painting / Printmaking
+            ],
+            photography: [
+                "Mark Aronson, Critic",
+                "Doug Ashford, Visiting Associate Professor",
+                "Colleen Asper, Critic",
+                "Pedro Barbeito, Lecturer",
+                "Anna Betbeze, Senior Critic",
+                "Michael Cloud, Critic",
+                "Marsha Cottrell, Critic",
+                "Anna Craycroft, Critic",
+                "Torkwase Dyson, Lecturer",
+                "Anoka Faruqee, Associate Professor",
+                "Rochelle Feinstein, Professor",
+                "Coco Fusco, Critic",
+                "Munro Galloway, Lecturer",
+                "Josephine Halvorson, Senior Critic",
+                "Kira Harris, Critic",
+                "Pablo Helguera, Critic",
+                "Byron Kim, Senior Critic"
+                // Add more names for Photography
+            ],
+            sculpture: [
+                "Samuel Messer, Professor (Adjunct)",
+                "Catherine Murphy, Senior Critic",
+                "Sarah Oppenheimer, Senior Critic",
+                "Sheila Pepe, Senior Critic",
+                "Dushko Petrovich, Lecturer",
+                "Halsey Rodman, Critic",
+                "James Siena, Critic",
+                "Robert Storr, Professor",
+                "William Villalongo, Lecturer",
+                "Molly Zuckerman-Hartung, Critic"
+                // Add more names for Sculpture
+            ],
+            financialAid: [
+                // List of financial aid staff
+                "John Doe, Financial Aid Officer",
+                "Jane Smith, Scholarship Coordinator",
+                "Robert Johnson, Work Study Advisor"
+                // Add more names for Financial Aid
+            ],
+            filmVideoInterdisciplinary: [
+                "Julian Gilbert-Davis, Lecturer",
+                "Elana Herzog, Lecturer",
+                "Brent Howard, Lecturer",
+                "Jennie Jones, Critic",
+                "Matt Keegan, Critic",
+                "Martin Kersels, Professor",
+                "Patrick Killoran, Critic",
+                "Jason Kraus",
+                "Leigh Ledare, Critic",
+                "Michelle Lopez, Lecturer",
+                "Steen Madsen, Critic",
+                "Joanna Malinowska, Critic",
+                "Dave McKenzie, Critic",
+                "Clifford Owens, Critic",
+                "Ramon Persson, Critic",
+                "Michael Queenland, Assistant Professor",
+                "Melinda Ring, Critic",
+                "Carolyn Salas, Lecturer",
+                "Erin Shirreff, Critic"
+                // Add more names for Film / Video / Interdisciplinary
+            ],
+        };
+
+        const selectedContent = facultyData[selectedSection] || [];
+
+        // Display the content in the facultyContent div
+        const contentHTML = selectedContent.map(item => `<p>${item}</p>`).join('');
+        facultyContent.innerHTML = contentHTML;
+    }
+
+    // Initial load on page load
+    loadFacultySection();
+</script>

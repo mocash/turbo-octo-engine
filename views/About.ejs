@@ -1,0 +1,82 @@
+<%- include('partials/navbar') %>
+
+<main>
+    <div class="about-container">
+        <section class="about-section">
+            <h1>About Us</h1>
+            <p>Welcome to our collaborative space at the Yale School of Art! This website is a dynamic project shaped by the
+                collective efforts of individuals spanning various disciplines within our community.</p>
+
+            <p>As a wiki, every graduate student, staff member, and faculty member has the ability to contribute and modify
+                the content. Soon, logins will be available for our friends, alumni, and other members of the school to
+                join in the collaboration.</p>
+
+            <p>Click "Edit this page" to log in with your Yale ID, allowing you to make changes or additions visible to
+                everyone.</p>
+
+            <p>While not every part of every page is open for editing by everyone, we value diverse voices and perspectives.
+                Although there are some locked areas, the majority of the site encourages free and open interaction.</p>
+
+            <p>Our collaborative community ensures that this website is a reliable source of information, reflecting the
+                multifaceted aspects of life within our institution. You may encounter content that surprises you or with
+                which you don't agree, showcasing the richness of our community.</p>
+
+            <p>If you have questions or concerns about the website, please email <a
+                    href="mailto:art.website@yale.edu">art.website@yale.edu</a>. We appreciate your feedback!</p>
+        </section>
+
+        <section class="about-section">
+            <h2>More about this site</h2>
+            <p>This site's graphic templates and inner workings were crafted by Tamara Maletic and Dan Michaelson of the
+                graphic design partnership Linked by Air, along with Takashi Okamoto of MudCorp. Dan, a faculty member, was
+                instrumental in its development.</p>
+
+            <p>Our site stands out as a module-based wiki. Authors choose modules suitable for their content, such as a
+                calendar, image gallery, list, official course description, or general text. Each module intelligently
+                organizes and formats content in a vibrant and systematic manner. Authors combine multiple modules to
+                create complete and engaging pages.</p>
+        </section>
+    </div>
+</main>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+    }
+
+    main {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .about-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .about-section {
+        flex: 0 0 calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+
+    h1, h2 {
+        color: #3498db;
+    }
+
+    a {
+        color: #3498db;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>

@@ -1,0 +1,151 @@
+<!-- views/admissions.ejs -->
+<%- include('partials/navbar') %>
+
+<!-- ADMISSIONS Page -->
+<style>
+    body {
+        background-color: #f9f9f9;
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .admissions {
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin: 50px auto;
+        padding: 20px;
+        width: 70%;
+        color: #444;
+        line-height: 1.6;
+    }
+
+    .card {
+        background-color: #ecf0f1;
+        border-radius: 8px;
+        padding: 15px;
+        margin-top: 15px;
+        transition: background-color 0.3s; /* Add transition for a smooth effect */
+    }
+
+    .card:hover {
+        background-color: #d4e6f1; /* Change the background color on hover */
+    }
+
+    h2 {
+        color: #2c3e50;
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    h3 {
+        color: #3498db;
+        font-size: 24px;
+        margin-top: 20px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    h3::before {
+        content: '+ ';
+        position: absolute;
+        left: -20px;
+        display: block;
+    }
+
+    h3.expanded::before {
+        content: '- ';
+    }
+
+    p {
+        color: #555;
+        font-size: 16px;
+        text-align: justify;
+        display: none;
+    }
+
+    a {
+        color: #3498db;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    section {
+        margin-bottom: 30px;
+    }
+</style>
+
+<div class="admissions">
+    <h2>ADMISSIONS</h2>
+
+    <!-- Admissions Open House Section -->
+    <section class="card">
+        <h3 onclick="toggleContent('openHouse')">ADMISSIONS OPEN HOUSE</h3>
+        <p id="openHouse">The School of Art does not offer individual interviews until the applicant has passed the Preliminary Selection Jury.
+            Instead, there will be an open-house introduction to the School at which representative members of the faculty will
+            discuss the programs and applicants will be given a guided tour of the facilities. All applicants are encouraged to
+            attend this briefing. The Open House will be held at the School, 1156 Chapel Street, on Thursday, November 19,
+            2015, from 2 p.m. to 5 p.m. Those planning to attend should notify the Office of Academic Affairs in advance by
+            filling out this <a href="#" target="_blank">online registration form</a>. Applicants should not bring examples of their work to this meeting.</p>
+    </section>
+
+    <!-- Application Deadline Section -->
+    <section class="card">
+        <h3 onclick="toggleContent('appDeadline')">APPLICATION DEADLINE</h3>
+        <p id="appDeadline">Online applications must be completed and submitted by 12 midnight EST on January 6, 2016. The online
+            application will open on 1 September.</p>
+    </section>
+
+    <!-- Entrance Requirements Section -->
+    <section class="card">
+        <h3 onclick="toggleContent('entranceRequirements')">ENTRANCE REQUIREMENTS</h3>
+        <p id="entranceRequirements">The School of Art requires for admission a high degree of capability and commitment. Applicants must hold a
+            bachelor’s degree from an accredited college or university or a diploma from a four-year accredited professional
+            art school. Admission to the School of Art is on a highly selective and competitive basis. Please click on
+            the <a href="#" target="_blank">SCHOOL OF ART BULLETIN PDF</a> link above for more complete information.</p>
+    </section>
+
+    <!-- Admission Section -->
+    <section class="card">
+        <h3 onclick="toggleContent('admission')">ADMISSION</h3>
+        <p id="admission">Students are admitted only in September of each year. Applicants are notified of the admissions committee’s
+            decisions on preliminary selections in early February, and final decisions in early March. No information about
+            decisions can be given over the telephone. To apply for more than one area of concentration, separate
+            applications, fees, and supporting documentation must be submitted. The work submitted should be representative
+            of the applicant’s experience in that particular field.</p>
+        <!-- ... (Continue with the rest of the content) -->
+    </section>
+
+    <!-- Application Status Section -->
+    <section class="card">
+        <h3 onclick="toggleContent('appStatus')">APPLICATION STATUS</h3>
+        <p id="appStatus">Once an application has been submitted, applicants can track the status of their application and the receipt of
+            required supporting materials (such as recommendations) online. Applicants are encouraged to check the status of
+            their application materials and follow up as necessary.</p>
+    </section>
+
+    <!-- Equal Opportunity Statement Section -->
+    <section class="card">
+        <h3 onclick="toggleContent('equalOpportunity')">EQUAL OPPORTUNITY STATEMENT</h3>
+        <p id="equalOpportunity">Yale University is committed to basing judgments concerning the admission, education, and employment of
+            individuals upon their qualifications and abilities and affirmatively seeks to attract to its faculty, staff, and student
+            body qualified persons of diverse backgrounds...</p>
+        <!-- ... (Continue with the rest of the content) -->
+    </section>
+</div>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        var section = document.querySelector('h3[onclick="toggleContent(\'' + id + '\')"]');
+        content.style.display = content.style.display === 'none' ? 'block' : 'none';
+        section.classList.toggle('expanded');
+    }
+</script>
+

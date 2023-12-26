@@ -1,0 +1,44 @@
+/* faculty.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+    color: #333;
+    text-align: center;
+}
+
+.faculty-section {
+    margin-top: 20px;
+}
+
+.faculty-category {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.faculty-member {
+    margin: 10px 0;
+}
+
+.faculty-name {
+    color: #007BFF; /* Blue color for faculty names to make them standout */
+    font-weight: bold;
+}
+
+.faculty-position {
+    font-style: italic;
+}

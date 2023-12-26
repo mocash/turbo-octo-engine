@@ -1,0 +1,58 @@
+<!-- views/contact.ejs -->
+<%- include('partials/navbar') %>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .contact-card {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        #map {
+            height: 300px;
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Contact Section -->
+    <div class="contact-card">
+        <h2>Yale School of Art</h2>
+        <p><strong>Directions:</strong> University in New Haven, Connecticut</p>
+        <p><strong>Website:</strong> <a href="https://art.yale.edu" target="_blank">art.yale.edu</a></p>
+        <p>The Yale School of Art is the art school of Yale University. Founded in 1864 as the first professional fine arts
+            school in the United States, it grants Masters of Fine Arts degrees to students completing ...
+            <a href="https://en.wikipedia.org/wiki/Yale_School_of_Art" target="_blank">Wikipedia</a></p>
+        <p><strong>Address:</strong> 1156 Chapel St, New Haven, CT 06511</p>
+        <p><strong>Phone:</strong> (203) 432-2600</p>
+        <p><strong>Hours:</strong> Open today · 8:30 am - 5:00 pm</p>
+        <p><strong>Founded:</strong> 1869</p>
+        <p><strong>Academic Staff:</strong> 100</p>
+        <p><strong>Dean:</strong> Robert Storr</p>
+
+        <!-- Google Map -->
+        <div id="map"></div>
+        <script>
+            var map = L.map('map').setView([41.3119, -72.9269], 15);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+            L.marker([41.3119, -72.9269]).addTo(map)
+                .bindPopup('Yale School of Art<br>1156 Chapel St, New Haven, CT 06511')
+                .openPopup();
+        </script>
+    </div>
+
+</body>

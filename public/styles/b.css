@@ -1,0 +1,79 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#facultySections {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+#facultyContent p {
+    margin: 0;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style for different sections */
+#facultyContent.administration p {
+    background-color: #ffe6e6;
+    font-weight: bold;
+}
+
+#facultyContent.artStaff p {
+    background-color: #e6f7ff;
+    font-weight: bold;
+}
+
+#facultyContent.graphicDesign p {
+    background-color: #e6ffe6;
+    font-weight: bold;
+}
+
+#facultyContent.paintingPrintmaking p {
+    background-color: #fff5e6;
+    font-weight: bold;
+}
+
+#facultyContent.photography p {
+    background-color: #f0f0f5;
+    font-weight: bold;
+}
+
+#facultyContent.sculpture p {
+    background-color: #e6e6fa;
+    font-weight: bold;
+}
+
+#facultyContent.financialAid p {
+    background-color: #f9e79f;
+    font-weight: bold;
+}
+
+#facultyContent.filmVideoInterdisciplinary p {
+    background-color: #d5dbdb;
+    font-weight: bold;
+}

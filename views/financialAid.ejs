@@ -1,0 +1,136 @@
+<%- include('partials/navbar') %>
+
+<!-- views/financial_aid.ejs -->
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .card {
+            flex: 0 0 calc(45% - 20px);
+            background-color: #977e7e;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .financial-aid {
+            background-color: #3498db; /* Blue */
+            color: #fff;
+        }
+
+        .veterans-benefits {
+            background-color: #e74c3c; /* Red */
+            color: #fff;
+        }
+
+        .work-study {
+            background-color: #2ecc71; /* Green */
+            color: #fff;
+        }
+
+        .expand-content {
+            margin-top: 10px;
+        }
+
+        h2, h3 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cards-container">
+        <!-- Financial Aid Section -->
+        <div class="card financial-aid">
+            <h2>Financial Aid</h2>
+            <p>
+                Financial aid—defined as a combination of work study, education loans, and scholarships—is designed to assist
+                students in financing their educations. Our goal is to ensure that any admitted student can afford to attend
+                the Yale School of Art, regardless of his or her financial resources. Approximately 79% of our population
+                receives scholarships. The average scholarship award for those who were eligible was $29,685.
+                In conformity with University policy, financial assistance is determined only after a student has been
+                accepted for admission and is awarded solely on the basis of financial need and available resources within the
+                Yale School of Art. There are no scholarships based on merit or any criteria other than financial need. The
+                School determines financial need in accordance with formulas established by institutional and federal
+                methodologies.
+                Students are encouraged to plan their finances for each year with the utmost care so that they are prepared to
+                cover their anticipated need at the start of the program. Our financial aid awards for 2015-16 are based on a
+                cost of attendance that includes tuition, allowances for living expenses, books & supplies, and healthcare
+                coverage. The School cannot guarantee additional help once the financial aid award is determined.
+                The process of applying for financial aid differs slightly, depending on whether you are a newly admitted
+                student, returning student, or a student seeking just student loans. The financial aid application deadline for
+                new students is March 1. You are encouraged to apply well before the admissions decision date to ensure the
+                best possible funding. The application deadline for returning students is March 15.
+                Individuals in default of a federal student loan will not be granted a financial aid award until clearance of
+                such is provided to the School. In addition, financial aid in any form is authorized contingent upon the
+                student’s maintaining satisfactory academic progress.
+            </p>
+        </div>
+
+        <!-- Veterans Administration Benefits Section -->
+        <div class="card veterans-benefits">
+            <h2>Veterans Administration Benefits</h2>
+            <p>
+                Eligible students are strongly encouraged to seek specific information about Veterans Administration (VA)
+                benefits from their local VA Office by calling (888) 442-4551 or by visiting their website. For information
+                regarding Yale’s participation in the Yellow Ribbon Program or for an application form.
+                <div id="veterans-benefits-content" class="expand-content">
+                    <!-- Additional content can go here -->
+                </div>
+            </p>
+        </div>
+
+        <!-- Work Study Section -->
+        <div class="card work-study">
+            <h2>Work Study and Part-Time Employment</h2>
+            <p>
+                Work study as part of your financial aid award indicates eligibility for a job within Yale. There are a number
+                of jobs within the School of Art (admissions, labs, studio crews, etc.) that pay $13.50 per hour in 2015-16. If
+                you are awarded a job within the School, you will be notified by the supervisor. Generally, it will involve
+                four-to-six hours a week during the regular academic year only. Art positions may be limited, and not all MFA
+                students necessarily will be assigned a job within the School. So it is suggested you examine the Yale Student
+                Employment Office (246 Church Street) online student job search. This job search engine lists campus,
+                community service (Federal Work Study), and other categories of employment for which you can apply online.
+                <div id="work-study-content" class="expand-content">
+                    <!-- Additional content can go here -->
+                </div>
+            </p>
+        </div>
+
+        <!-- Teaching Assistantships Section -->
+        <div class="card">
+            <h2>Teaching Assistantships</h2>
+            <p>
+                Appointments to assistantships are made by the dean and faculty of the School of Art and are usually awarded
+                only to second-year students. A student may not apply for an assistantship because all appointments are based
+                on individual merit and performance qualifications and not on financial need. Teaching assistantships may be
+                for one or two terms, and the gross monthly payments (which generally range between $500 and $700) are based
+                on the number of class hours and sections. Yale offers a searchable database of grants currently available. If
+                you are a new American and under 31 years of age, you might consider applying for the Paul & Daisy Soros
+                Fellowships for New Americans. Please note that any outside grants, fellowships, or scholarships are considered
+                financial resources and would reduce any awarded Yale scholarship dollar-for-dollar.
+            </p>
+        </div>
+    </div>
+
+</body>
