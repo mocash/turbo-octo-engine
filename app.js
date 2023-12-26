@@ -12,8 +12,8 @@ app.get('/', (req, res) => {
 });
 
 // Routes for each page
-app.get('/about', (req, res) => {
-    res.render('about', { body: '' });
+app.get('/abouts', (req, res) => {
+    res.render('abouts', { body: '' });
 });
 
 app.get('/admissions', (req, res) => {
